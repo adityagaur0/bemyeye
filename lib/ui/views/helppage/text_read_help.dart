@@ -1,7 +1,7 @@
-
 import 'package:audioplayers/audioplayers.dart';
+import 'package:bemyeye/service/tts_service.dart';
+import 'package:bemyeye/ui/views/CustomMessage/messages.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 
 class TextReadHelp extends StatefulWidget {
   const TextReadHelp({super.key});
@@ -11,24 +11,36 @@ class TextReadHelp extends StatefulWidget {
 }
 
 class _TextReadHelpState extends State<TextReadHelp> {
-  final FlutterTts flutterTts = FlutterTts();
+  final TTSService ttsService = TTSService();
   final player = AudioPlayer();
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    player.play(AssetSource("sounds/ReadText.mp3"));
+    ttsService.speak(readtext);
+    // player.play(AssetSource("sounds/ReadText.mp3"));
+  }
+
+  @override
+  void dispose() {
+    ttsService.stop(); // Stop any ongoing speech
+    //flutterTts.shutdown(); // Release FlutterTts resources
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: double.infinity,
-      width: double.infinity,
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+        child: GestureDetector(
+          onTap: () {
+            // player.stop();
+            Navigator.pop(context); //CLose THe bottom modal manually
+          },
+          onDoubleTap: () {
+            ttsService.speak(readtext);
+          },
           child: Column(
             children: [
               Row(
@@ -43,7 +55,7 @@ class _TextReadHelpState extends State<TextReadHelp> {
                     padding: const EdgeInsetsDirectional.fromSTEB(80, 0, 0, 0),
                     child: TextButton(
                       onPressed: () {
-                        player.stop();
+                        // player.stop();
                         Navigator.pop(
                             context); //CLose THe bottom modal manually
                       },
@@ -61,18 +73,7 @@ class _TextReadHelpState extends State<TextReadHelp> {
               const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
                 child: Text(
-                  "Hold the camera over some text to have it automatically read to you. As new text comes into view, it will also be read out loud.",
-                  style: TextStyle(fontSize: 18),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
-                child: Text(
-                  " While reading out loud, Seeing Al may start again from the beginning if the camera captures a clearer image of the text.",
+                  "Hold the camera over some text and double tap on the screen to read out loud. To repeat this again double tap and to exit this introduction single tap.",
                   style: TextStyle(fontSize: 18),
                   textAlign: TextAlign.start,
                 ),

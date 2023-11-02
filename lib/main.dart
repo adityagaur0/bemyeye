@@ -2,20 +2,9 @@ import 'package:bemyeye/ui/views/navpages/homepage.dart';
 import 'package:bemyeye/ui/views/startup/startup_view.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-// import 'package:camera/camera.dart';
 
-// List<CameraDescription>? cameras;
-late List<CameraDescription> cameras;
-
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   cameras = await availableCameras();
-//   runApp(const MyApp());
-// }
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  cameras = await availableCameras();
   runApp(const MyApp());
 }
 
