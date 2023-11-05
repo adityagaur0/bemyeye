@@ -90,7 +90,7 @@ class _ReadTextPageState extends State<ReadTextPage>
                           ),
                           Container(
                             padding: const EdgeInsets.only(bottom: 30.0),
-                            child: Center(
+                            child: const Center(
                                 // child: ElevatedButton(
                                 //   onPressed: _scanImage,
                                 //   child: const Text('Scan text'),
@@ -220,10 +220,10 @@ class _ReadTextPageState extends State<ReadTextPage>
 class ResultScreen extends StatefulWidget {
   final String textstring;
 
-  ResultScreen({Key? key, required this.textstring}) : super(key: key);
+  const ResultScreen({Key? key, required this.textstring}) : super(key: key);
 
   @override
-  _ResultScreenState createState() => _ResultScreenState();
+  State<ResultScreen> createState() => _ResultScreenState();
 }
 
 class _ResultScreenState extends State<ResultScreen> {
@@ -257,18 +257,18 @@ class _ResultScreenState extends State<ResultScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Center(
                       child: Lottie.asset('assets/lottie/womenTalk.json',
                           width: 250)),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
 
                   Container(
-                    padding: EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(20.0),
                     decoration: BoxDecoration(
                       color: Colors.white, // Background color
                       borderRadius:
@@ -278,14 +278,14 @@ class _ResultScreenState extends State<ResultScreen> {
                           color: Colors.grey.withOpacity(0.5),
                           spreadRadius: 3,
                           blurRadius: 5,
-                          offset: Offset(0, 3),
+                          offset: const Offset(0, 3),
                         ),
                       ],
                     ),
                     child: Text(
                       widget.textstring,
                       softWrap: false,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 13, // Change the font size as needed
                         fontWeight: FontWeight
                             .normal, // Change the font weight as needed

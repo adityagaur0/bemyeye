@@ -13,15 +13,12 @@ class _DocumentPageState extends State<DocumentPage> {
   final player = AudioPlayer();
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     player.play(AssetSource("sounds/document.mp3"));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Center(child: Text("Document")),
-    );
+    return const Center(child: Text("Document"));
   }
 }

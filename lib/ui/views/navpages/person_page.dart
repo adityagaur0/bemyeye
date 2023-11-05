@@ -12,15 +12,12 @@ class _PersonInfoPageState extends State<PersonInfoPage> {
   final player = AudioPlayer();
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     player.play(AssetSource("sounds/Person.mp3"));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Center(child: Text("Person")),
-    );
+    return const Center(child: Text("Person"));
   }
 }

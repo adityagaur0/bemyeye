@@ -4,7 +4,7 @@ class CustomPopupMessage extends StatelessWidget {
   final String title;
   final String message;
 
-  CustomPopupMessage({
+  const CustomPopupMessage({super.key, 
     required this.title,
     required this.message,
   });
@@ -14,12 +14,12 @@ class CustomPopupMessage extends StatelessWidget {
     return AlertDialog(
       title: Text(
         title,
-        style: TextStyle(fontSize: 20),
+        style: const TextStyle(fontSize: 20),
       ),
       content: Text(message),
       actions: <Widget>[
         TextButton(
-          child: Text('OK'),
+          child: const Text('OK'),
           onPressed: () {
             Navigator.of(context).pop(); // Close the pop-up
           },

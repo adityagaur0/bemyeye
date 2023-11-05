@@ -37,14 +37,12 @@ class _StartupViewState extends State<StartupView> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Lottie.asset('assets/lottie/welcome.json'),
-              Lottie.asset('assets/lottie/welcome2.json', width: 250),
-            ],
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Lottie.asset('assets/lottie/welcome.json'),
+            Lottie.asset('assets/lottie/welcome2.json', width: 250),
+          ],
         ),
       ),
     );

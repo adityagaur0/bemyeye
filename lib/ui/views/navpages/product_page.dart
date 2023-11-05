@@ -12,15 +12,12 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
   final player = AudioPlayer();
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     player.play(AssetSource("sounds/ProductScanner.mp3"));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Center(child: Text("Product Scanner")),
-    );
+    return const Center(child: Text("Product Scanner"));
   }
 }

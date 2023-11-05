@@ -17,29 +17,27 @@ class _CurrencyPageState extends State<CurrencyPage> {
   final player = AudioPlayer();
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     player.play(AssetSource("sounds/currency.mp3"));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ImagePickerDemo(),
-    );
+    return const ImagePickerDemo();
   }
 }
 
 class ImagePickerDemo extends StatefulWidget {
+  const ImagePickerDemo({super.key});
+
   @override
-  _ImagePickerDemoState createState() => _ImagePickerDemoState();
+  State<ImagePickerDemo> createState() => _ImagePickerDemoState();
 }
 
 class _ImagePickerDemoState extends State<ImagePickerDemo> {
   final ImagePicker _picker = ImagePicker();
   XFile? _image;
   File? file;
-  var _recognitions;
   var v = "";
   // var dataList = [];
   @override
@@ -66,12 +64,11 @@ class _ImagePickerDemoState extends State<ImagePickerDemo> {
       });
       detectimage(file!);
     } catch (e) {
-      print('Error picking image: $e');
+      // print('Error picking image: $e');
     }
   }
 
   Future detectimage(File image) async {
-    int startTime = new DateTime.now().millisecondsSinceEpoch;
     var recognitions = await Tflite.runModelOnImage(
       path: image.path,
       numResults: 6,
@@ -80,23 +77,21 @@ class _ImagePickerDemoState extends State<ImagePickerDemo> {
       imageStd: 127.5,
     );
     setState(() {
-      _recognitions = recognitions;
       v = recognitions.toString();
       // dataList = List<Map<String, dynamic>>.from(jsonDecode(v));
     });
-    print("//////////////////////////////////////////////////");
-    print(_recognitions);
+    // print("//////////////////////////////////////////////////");
+    // print(_recognitions);
     // print(dataList);
-    print("//////////////////////////////////////////////////");
-    int endTime = new DateTime.now().millisecondsSinceEpoch;
-    print("Inference took ${endTime - startTime}ms");
+    // print("//////////////////////////////////////////////////");
+    // print("Inference took ${endTime - startTime}ms");
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter TFlite'),
+        title: const Text('Flutter TFlite'),
       ),
       body: Center(
         child: Column(
@@ -110,13 +105,13 @@ class _ImagePickerDemoState extends State<ImagePickerDemo> {
                 fit: BoxFit.cover,
               )
             else
-              Text('No image selected'),
-            SizedBox(height: 20),
+              const Text('No image selected'),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _pickImage,
-              child: Text('Pick Image from Gallery'),
+              child: const Text('Pick Image from Gallery'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(v),
           ],
         ),

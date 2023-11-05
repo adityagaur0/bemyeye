@@ -30,17 +30,17 @@ class _TextReadHelpState extends State<TextReadHelp> {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-        child: GestureDetector(
-          onTap: () {
-            // player.stop();
-            Navigator.pop(context); //CLose THe bottom modal manually
-          },
-          onDoubleTap: () {
-            ttsService.speak(readtext);
-          },
+    return GestureDetector(
+      onTap: () {
+        // player.stop();
+        Navigator.pop(context); //CLose THe bottom modal manually
+      },
+      onDoubleTap: () {
+        ttsService.speak(readtext);
+      },
+      child: Expanded(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
           child: Column(
             children: [
               Row(

@@ -12,15 +12,12 @@ class _BookReaderState extends State<BookReader> {
   final player = AudioPlayer();
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     player.play(AssetSource("sounds/Book.mp3"));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Center(child: Text("Book")),
-    );
+    return const Center(child: Text("Book"));
   }
 }
