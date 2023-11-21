@@ -2,17 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:lottie/lottie.dart';
 
-class ResultReadTextScreen extends StatelessWidget {
+class ResultReadTextScreen extends StatefulWidget {
   final String textstring;
 
-  ResultReadTextScreen({Key? key, required this.textstring}) : super(key: key);
+  const ResultReadTextScreen({Key? key, required this.textstring})
+      : super(key: key);
 
+  @override
+  State<ResultReadTextScreen> createState() => _ResultReadTextScreenState();
+}
+
+class _ResultReadTextScreenState extends State<ResultReadTextScreen> {
   final FlutterTts flutterTts = FlutterTts();
 
   speak(String text) async {
     await flutterTts.setLanguage("en-US");
     await flutterTts.setPitch(1); // 0.5 to 1.5
     await flutterTts.speak(text);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    speak(widget
+        .textstring); // Automatically start speaking when the screen is initialized
   }
 
   @override
@@ -34,9 +47,8 @@ class ResultReadTextScreen extends StatelessWidget {
                     height: 20,
                   ),
                   Center(
-                    child: Lottie.asset('assets/lottie/womenTalk.json',
-                        width: 250),
-                  ),
+                      child: Lottie.asset('assets/lottie/womenTalk.json',
+                          width: 250)),
                   const SizedBox(
                     height: 20,
                   ),
@@ -57,7 +69,7 @@ class ResultReadTextScreen extends StatelessWidget {
                       ],
                     ),
                     child: Text(
-                      textstring,
+                      widget.textstring,
                       softWrap: false,
                       style: const TextStyle(
                         fontSize: 13, // Change the font size as needed
@@ -69,7 +81,7 @@ class ResultReadTextScreen extends StatelessWidget {
                   ),
 
                   // ElevatedButton(
-                  //   onPressed: () => speak(textstring),
+                  //   onPressed: () => speak(widget.textstring),
                   //   child: Text("Start Text to Speech"),
                   // ),
                 ],
@@ -78,4 +90,11 @@ class ResultReadTextScreen extends StatelessWidget {
           ),
         ),
       );
+
+  @override
+  void dispose() {
+    flutterTts.stop(); // Stop any ongoing speech
+    //flutterTts.shutdown(); // Release FlutterTts resources
+    super.dispose();
+  }
 }
