@@ -1,3 +1,5 @@
+import 'package:bemyeye/src/views/features/homepage.dart';
+import 'package:bemyeye/src/views/startup/startup_view.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
