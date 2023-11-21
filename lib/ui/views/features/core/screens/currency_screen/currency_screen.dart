@@ -25,6 +25,7 @@ class _CurrencyPageState extends State<CurrencyPage>
   late final Future<void> _future;
   CameraController? _cameraController;
   final textRecognizer = TextRecognizer();
+  final player = AudioPlayer();
 
   @override
 //to display camera feed in our app ,we will need to have control of the lifecycle
@@ -33,6 +34,7 @@ class _CurrencyPageState extends State<CurrencyPage>
   void initState() {
     // TODO: implement initState
     super.initState();
+    player.play(AssetSource("sounds/currency.mp3"));
     WidgetsBinding.instance.addObserver(this);
     _future = _requestCameraPermission();
   }
@@ -42,6 +44,7 @@ class _CurrencyPageState extends State<CurrencyPage>
     WidgetsBinding.instance.removeObserver(this);
     _stopCamera();
     textRecognizer.close();
+    player.stop();
     super.dispose();
   }
 
