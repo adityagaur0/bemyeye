@@ -25,6 +25,7 @@ class _ResultCurrencyScreenState extends State<ResultCurrencyScreen> {
   void initState() {
     super.initState();
     determineResultMessage();
+    speak(determineResultMessage().toString());
   }
 
   void determineResultMessage() {
