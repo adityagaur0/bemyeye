@@ -96,9 +96,6 @@ class _CurrencyPageState extends State<CurrencyPage>
                 },
               ),
             Scaffold(
-              appBar: AppBar(
-                title: const Text('Text Recognition Sample'),
-              ),
               backgroundColor: _isPermissionGranted ? Colors.transparent : null,
               body: _isPermissionGranted
                   ? Column(
