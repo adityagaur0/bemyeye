@@ -1,11 +1,11 @@
-import 'package:bemyeye/ui/views/features/core/screens/read_text_screen/read_text_help.dart';
-import 'package:bemyeye/ui/views/features/book_reader.dart';
-import 'package:bemyeye/ui/views/features/core/screens/currency_screen/currency_screen.dart';
-import 'package:bemyeye/ui/views/features/document_page.dart';
-import 'package:bemyeye/ui/views/features/person_page.dart';
-import 'package:bemyeye/ui/views/features/product_page.dart';
-import 'package:bemyeye/ui/views/features/core/screens/read_text_screen/readtext_screen.dart';
-import 'package:bemyeye/ui/views/features/scene_page.dart';
+import 'package:bemyeye/src/views/features/core/screens/read_text_screen/read_text_help.dart';
+import 'package:bemyeye/src/views/features/book_reader.dart';
+import 'package:bemyeye/src/views/features/core/screens/currency_screen/currency_screen.dart';
+import 'package:bemyeye/src/views/features/document_page.dart';
+import 'package:bemyeye/src/views/features/person_page.dart';
+import 'package:bemyeye/src/views/features/product_page.dart';
+import 'package:bemyeye/src/views/features/core/screens/read_text_screen/readtext_screen.dart';
+import 'package:bemyeye/src/views/features/scene_page.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {

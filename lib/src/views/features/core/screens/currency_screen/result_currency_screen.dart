@@ -34,7 +34,7 @@ class ResultCurrencyScreen extends StatelessWidget {
               padding: const EdgeInsets.all(30.0),
               child: Text(resultMessage),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             // Text(text),
