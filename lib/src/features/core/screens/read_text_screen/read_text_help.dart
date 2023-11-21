@@ -1,6 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
-import 'package:bemyeye/service/tts_service.dart';
-import 'package:bemyeye/ui/views/CustomMessage/messages.dart';
+import 'package:bemyeye/src/constants/text_strings.dart';
+import 'package:bemyeye/src/service/tts_service.dart';
 import 'package:flutter/material.dart';
 
 class TextReadHelp extends StatefulWidget {
