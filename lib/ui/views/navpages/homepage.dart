@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text("Be My Eye")),
+        title: const Center(child: Text("ICANSEE")),
         actions: [
           IconButton(
             onPressed: _openHelpOverlay, //7****
