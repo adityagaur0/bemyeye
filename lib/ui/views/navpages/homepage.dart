@@ -21,12 +21,12 @@ class _HomeState extends State<Home> {
 
   List pages = [
     const ReadTextPage(),
+    const CurrencyPage(),
     const DocumentPage(),
     const BookReader(),
     const ProductInfoPage(),
     const PersonInfoPage(),
-    const CurrencyPage(),
-    const ScenePage(),
+    // const ScenePage(),
   ];
   int currentIndex = 0;
   void onTap(int index) {
@@ -77,13 +77,13 @@ class _HomeState extends State<Home> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.text_fields_sharp), label: ''),
             BottomNavigationBarItem(
+                icon: Icon(Icons.currency_rupee_rounded), label: ''),
+            BottomNavigationBarItem(
                 icon: Icon(Icons.document_scanner_rounded), label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.book_rounded), label: ''),
             BottomNavigationBarItem(
                 icon: Icon(Icons.qr_code_scanner_sharp), label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.man), label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.currency_rupee_rounded), label: ''),
           ],
         ),
       ),
