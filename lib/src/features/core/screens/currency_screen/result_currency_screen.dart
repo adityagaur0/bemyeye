@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 class ResultCurrencyScreen extends StatefulWidget {
   final String text;
@@ -63,5 +64,12 @@ class _ResultCurrencyScreenState extends State<ResultCurrencyScreen> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    flutterTts.stop(); // Stop any ongoing speech
+    //flutterTts.shutdown(); // Release FlutterTts resources
+    super.dispose();
   }
 }
