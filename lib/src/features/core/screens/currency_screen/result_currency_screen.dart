@@ -1,28 +1,41 @@
 import 'package:flutter/material.dart';
 
-class ResultCurrencyScreen extends StatelessWidget {
+class ResultCurrencyScreen extends StatefulWidget {
   final String text;
 
   const ResultCurrencyScreen({Key? key, required this.text}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    String resultMessage = '';
+  _ResultCurrencyScreenState createState() => _ResultCurrencyScreenState();
+}
 
-    if (text.contains("500\n")) {
+class _ResultCurrencyScreenState extends State<ResultCurrencyScreen> {
+  late String resultMessage;
+
+  @override
+  void initState() {
+    super.initState();
+    determineResultMessage();
+  }
+
+  void determineResultMessage() {
+    if (widget.text.contains("500\n")) {
       resultMessage = "Yes for 500";
-    } else if (text.contains("100\n")) {
+    } else if (widget.text.contains("100\n")) {
       resultMessage = "Yes for 100";
-    } else if (text.contains("10\n")) {
+    } else if (widget.text.contains("10\n")) {
       resultMessage = "Yes for 10";
-    } else if (text.contains("50\n")) {
+    } else if (widget.text.contains("50\n")) {
       resultMessage = "Yes for 50";
-    } else if (text.contains("200\n")) {
+    } else if (widget.text.contains("200\n")) {
       resultMessage = "Yes for 200";
     } else {
       resultMessage = "Condition not met";
     }
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Result'),
@@ -37,7 +50,7 @@ class ResultCurrencyScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            // Text(text),
+            // Text(widget.text),
           ],
         ),
       ),
