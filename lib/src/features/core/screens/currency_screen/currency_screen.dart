@@ -1,12 +1,13 @@
 import 'dart:io';
 
-import 'package:bemyeye/ui/views/features/core/screens/currency_screen/result_currency_screen.dart';
+import 'package:bemyeye/src/features/core/screens/currency_screen/result_currency_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:tflite_v2/tflite_v2.dart';
 
 class CurrencyPage extends StatefulWidget {
   const CurrencyPage({super.key});

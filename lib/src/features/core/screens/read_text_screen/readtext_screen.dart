@@ -1,10 +1,12 @@
 import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
-import 'package:bemyeye/ui/views/features/core/screens/read_text_screen/result_readtext_screen.dart';
+import 'package:bemyeye/src/features/core/screens/read_text_screen/result_readtext_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
+import 'package:lottie/lottie.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class ReadTextPage extends StatefulWidget {
