@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
     setState(() {
       // Check if the user is moving to index 0 and the help overlay hasn't been shown yet
       if (index == 0 && !helpOverlayShown) {
-        _openHelpOverlay();
+        //_openHelpOverlay();
         helpOverlayShown = true; // Set the flag to true
       }
       currentIndex = index;
