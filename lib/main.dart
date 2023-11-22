@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const Home(),
       },
       theme: ThemeData().copyWith(
+        // backgroundColor: Color(0xFFF4E9E9),
         //scaffoldBackgroundColor: Color(0xFFF4E9E9),
         brightness: Brightness.light,
         colorScheme: kColorScheme,
