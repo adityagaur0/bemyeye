@@ -30,15 +30,15 @@ class _ResultCurrencyScreenState extends State<ResultCurrencyScreen> {
 
   void determineResultMessage() {
     if (widget.text.contains("500\n")) {
-      resultMessage = "Yes for 500";
+      resultMessage = "500 Rupees";
     } else if (widget.text.contains("100\n")) {
-      resultMessage = "Yes for 100";
+      resultMessage = "100 Rupees";
     } else if (widget.text.contains("10\n")) {
-      resultMessage = "Yes for 10";
+      resultMessage = "10 Rupees";
     } else if (widget.text.contains("50\n")) {
-      resultMessage = "Yes for 50";
+      resultMessage = "50 Rupees";
     } else if (widget.text.contains("200\n")) {
-      resultMessage = "Yes for 200";
+      resultMessage = "200 Rupees";
     } else {
       resultMessage = "Condition not met";
     }
