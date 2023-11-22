@@ -12,7 +12,7 @@ var kDarkColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(255, 5, 99, 125),
 );
 var kColorScheme = ColorScheme.fromSeed(
-  seedColor: const Color.fromARGB(0, 255, 255, 255),
+  seedColor: const Color(0xFFF4E9E9),
 );
 
 class MyApp extends StatelessWidget {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const Home(),
       },
       theme: ThemeData().copyWith(
-        scaffoldBackgroundColor: Color(0xFFF4E9E9),
+        //scaffoldBackgroundColor: Color(0xFFF4E9E9),
         brightness: Brightness.light,
         colorScheme: kColorScheme,
         useMaterial3: true,
