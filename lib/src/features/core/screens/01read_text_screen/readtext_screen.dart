@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
-import 'package:bemyeye/src/features/core/screens/read_text_screen/read_text_help.dart';
-import 'package:bemyeye/src/features/core/screens/read_text_screen/result_readtext_screen.dart';
+import 'package:bemyeye/src/features/core/screens/01read_text_screen/read_text_help.dart';
+import 'package:bemyeye/src/features/core/screens/01read_text_screen/result_readtext_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';

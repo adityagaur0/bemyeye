@@ -1,11 +1,9 @@
-import 'package:bemyeye/src/features/core/screens/read_text_screen/read_text_help.dart';
-import 'package:bemyeye/src/features/book_reader.dart';
-import 'package:bemyeye/src/features/core/screens/currency_screen/currency_screen.dart';
-import 'package:bemyeye/src/features/document_page.dart';
-import 'package:bemyeye/src/features/person_page.dart';
-import 'package:bemyeye/src/features/product_page.dart';
-import 'package:bemyeye/src/features/core/screens/read_text_screen/readtext_screen.dart';
-import 'package:bemyeye/src/features/scene_page.dart';
+import 'package:bemyeye/src/features/core/screens/01read_text_screen/read_text_help.dart';
+import 'package:bemyeye/src/features/core/screens/02currency_screen/currency_screen.dart';
+import 'package:bemyeye/src/features/core/screens/01read_text_screen/readtext_screen.dart';
+import 'package:bemyeye/src/features/core/screens/03canvas/canvas_screen.dart';
+import 'package:bemyeye/src/features/core/screens/04product_scanner/product_scanner_screen.dart';
+import 'package:bemyeye/src/features/core/screens/05object_recognition/object_recognition_screen.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -22,10 +20,9 @@ class _HomeState extends State<Home> {
   List pages = [
     const ReadTextPage(),
     const CurrencyPage(),
-    const DocumentPage(),
-    const BookReader(),
-    const ProductInfoPage(),
-    const PersonInfoPage(),
+    const CanvasScreen(),
+    const ProductScannerScreen(),
+    const ObjectRecognitionScreen(),
     // const ScenePage(),
   ];
   int currentIndex = 0;
@@ -78,12 +75,11 @@ class _HomeState extends State<Home> {
                 icon: Icon(Icons.text_fields_sharp), label: ''),
             BottomNavigationBarItem(
                 icon: Icon(Icons.currency_rupee_rounded), label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.draw_outlined), label: ''),
             BottomNavigationBarItem(
-                icon: Icon(Icons.document_scanner_rounded), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.book_rounded), label: ''),
+                icon: Icon(Icons.qr_code_scanner), label: ''),
             BottomNavigationBarItem(
-                icon: Icon(Icons.qr_code_scanner_sharp), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.man), label: ''),
+                icon: Icon(Icons.screenshot_monitor), label: ''),
           ],
         ),
       ),

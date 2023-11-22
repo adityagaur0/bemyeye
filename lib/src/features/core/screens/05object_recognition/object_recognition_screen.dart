@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ObjectRecognitionDart extends StatefulWidget {
-  const ObjectRecognitionDart({super.key});
+class ObjectRecognitionScreen extends StatefulWidget {
+  const ObjectRecognitionScreen({super.key});
 
   @override
-  State<ObjectRecognitionDart> createState() => _ObjectRecognitionDartState();
+  State<ObjectRecognitionScreen> createState() =>
+      _ObjectRecognitionScreenState();
 }
 
-class _ObjectRecognitionDartState extends State<ObjectRecognitionDart> {
+class _ObjectRecognitionScreenState extends State<ObjectRecognitionScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(

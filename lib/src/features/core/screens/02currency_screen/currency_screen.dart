@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:bemyeye/src/features/core/screens/currency_screen/result_currency_screen.dart';
+import 'package:bemyeye/src/features/core/screens/02currency_screen/result_currency_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
