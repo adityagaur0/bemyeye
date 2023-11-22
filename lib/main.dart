@@ -27,6 +27,8 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const Home(),
       },
       theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: Color(0xFFF4E9E9),
+        brightness: Brightness.light,
         colorScheme: kColorScheme,
         useMaterial3: true,
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -46,6 +48,7 @@ class MyApp extends StatelessWidget {
             ),
       ),
       darkTheme: ThemeData.dark().copyWith(
+        brightness: Brightness.dark,
         useMaterial3: true,
         colorScheme: kDarkColorScheme,
         cardTheme: const CardTheme().copyWith(
