@@ -26,7 +26,8 @@ class _ResultCurrencyScreenState extends State<ResultCurrencyScreen> {
   void initState() {
     super.initState();
     determineResultMessage();
-    speak(resultMessage);
+    speak(resultMessage +
+        "To Repeat this again double tap and to exit this page single tap.");
   }
 
   void determineResultMessage() {
@@ -41,7 +42,7 @@ class _ResultCurrencyScreenState extends State<ResultCurrencyScreen> {
     } else if (widget.text.contains("200\n")) {
       resultMessage = "200 Rupees";
     } else {
-      resultMessage = "Invalid request";
+      resultMessage = "Invalid request.";
     }
   }
 
