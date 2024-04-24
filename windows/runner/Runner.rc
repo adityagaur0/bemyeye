@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "bemyeye" "\0"
+            VALUE "FileDescription", "icansee" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "bemyeye" "\0"
+            VALUE "InternalName", "icansee" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "bemyeye.exe" "\0"
-            VALUE "ProductName", "bemyeye" "\0"
+            VALUE "OriginalFilename", "icansee.exe" "\0"
+            VALUE "ProductName", "icansee" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

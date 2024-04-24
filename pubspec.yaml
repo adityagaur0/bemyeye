@@ -1,4 +1,4 @@
-name: bemyeye
+name: icansee
 description: A new Flutter project.
 
 publish_to: 'none' 
@@ -22,6 +22,9 @@ dependencies:
   google_ml_kit: ^0.16.2
   permission_handler: ^11.0.1
   shared_preferences: ^2.2.2
+  google_mlkit_digital_ink_recognition: ^0.10.0
+  google_mlkit_barcode_scanning: ^0.10.0
+  google_mlkit_image_labeling: ^0.10.0
   
 
 dev_dependencies:
@@ -40,5 +43,10 @@ flutter:
   assets:
     - assets/lottie/
     - assets/sounds/
-    - assets/ML/labels.txt
-    - assets/ML/model_unquant.tflite
+    - assets/ML/
+    - assets/images/
+
+fonts:
+  - family: MontserratAlt1
+    fonts:
+      - asset: assets/fonts/ttf/MontserratAlt1-Light.ttf

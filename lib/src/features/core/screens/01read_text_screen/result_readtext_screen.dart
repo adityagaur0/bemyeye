@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:icansee/src/constants/lottie_string.dart';
 import 'package:lottie/lottie.dart';
 
 class ResultReadTextScreen extends StatefulWidget {
@@ -24,8 +25,9 @@ class _ResultReadTextScreenState extends State<ResultReadTextScreen> {
   @override
   void initState() {
     super.initState();
-    speak(widget
-        .textstring); // Automatically start speaking when the screen is initialized
+    widget.textstring == ""
+        ? speak("No text to read")
+        : speak("${widget.textstring}To exit the screen Single tap"); // Automatically start speaking when the screen is initialized
   }
 
   @override
@@ -46,9 +48,7 @@ class _ResultReadTextScreenState extends State<ResultReadTextScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Center(
-                      child: Lottie.asset('assets/lottie/womenTalk.json',
-                          width: 250)),
+                  Center(child: Lottie.asset(lwomenTalk, width: 250)),
                   const SizedBox(
                     height: 20,
                   ),
@@ -68,16 +68,27 @@ class _ResultReadTextScreenState extends State<ResultReadTextScreen> {
                         ),
                       ],
                     ),
-                    child: Text(
-                      widget.textstring,
-                      softWrap: false,
-                      style: const TextStyle(
-                        fontSize: 13, // Change the font size as needed
-                        fontWeight: FontWeight
-                            .normal, // Change the font weight as needed
-                        color: Colors.black, // Text color
-                      ),
-                    ),
+                    child: widget.textstring == ""
+                        ? const Text(
+                            "No Text To Read",
+                            softWrap: false,
+                            style: TextStyle(
+                              fontSize: 13, // Change the font size as needed
+                              fontWeight: FontWeight
+                                  .normal, // Change the font weight as needed
+                              color: Colors.black, // Text color
+                            ),
+                          )
+                        : Text(
+                            widget.textstring,
+                            softWrap: false,
+                            style: const TextStyle(
+                              fontSize: 13, // Change the font size as needed
+                              fontWeight: FontWeight
+                                  .normal, // Change the font weight as needed
+                              color: Colors.black, // Text color
+                            ),
+                          ),
                   ),
 
                   // ElevatedButton(

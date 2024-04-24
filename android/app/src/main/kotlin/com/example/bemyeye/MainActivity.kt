@@ -1,4 +1,4 @@
-package com.example.bemyeye
+package com.example.icansee
 
 import io.flutter.embedding.android.FlutterActivity
 

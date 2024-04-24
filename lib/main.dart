@@ -1,5 +1,5 @@
-import 'package:bemyeye/src/features/homepage.dart';
-import 'package:bemyeye/src/startup/startup_view.dart';
+import 'package:icansee/src/features/homepage.dart';
+import 'package:icansee/src/startup/startup_view.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
